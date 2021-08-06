@@ -1,9 +1,9 @@
 ﻿using System;
 
 /// <summary>
-/// This is a derived class Fish from superclass Animals
+/// This is a derived class Fish from superclass Animal
 /// </summary>
-public class Fish : Animals
+public class Fish : Animal
 {
 	public Fish()
 	{

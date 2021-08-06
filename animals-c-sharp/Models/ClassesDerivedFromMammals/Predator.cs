@@ -3,9 +3,9 @@
 /// <summary>
 /// This is a derived class Predators from class Mammals
 /// </summary>
-public class Predators : Mammals
+public class Predator : Mammal
 {
-	public Predators()
+	public Predator()
 	{
 	}
 }

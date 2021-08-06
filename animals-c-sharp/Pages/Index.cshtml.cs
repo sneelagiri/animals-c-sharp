@@ -15,6 +15,6 @@ namespace animals_c_sharp.Pages
 
         }
 
-        ObservableCollection<Animals> AnimalsCollection = new ObservableCollection<Animals> { };
+        ObservableCollection<Animal> AnimalsCollection = new ObservableCollection<Animal> { };
     }
 }
