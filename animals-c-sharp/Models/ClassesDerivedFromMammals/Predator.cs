@@ -5,7 +5,13 @@
 /// </summary>
 public class Predator : Mammal
 {
-	public Predator()
+    protected bool KillsPrey { get; set; }
+
+    public Predator()
 	{
-	}
+        CanEat = true;
+        CanMove = true;
+        FemalesProduceMilk = true;
+        KillsPrey = true;
+    }
 }

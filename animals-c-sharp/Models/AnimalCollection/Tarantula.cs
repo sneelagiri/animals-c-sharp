@@ -5,7 +5,14 @@
 /// </summary>
 public class Tarantula : Animal
 {
-	public Tarantula()
+    public int NumberOfLegs { get; set; }
+    public bool ProducesSilk { get; set; }
+
+    public Tarantula()
 	{
-	}
+        CanEat = true;
+        CanMove = true;
+        NumberOfLegs = 8;
+        ProducesSilk = true;
+    }
 }

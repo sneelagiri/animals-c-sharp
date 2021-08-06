@@ -1,11 +1,16 @@
 ﻿using System;
 
 /// <summary>
-/// This is a derived class Insects from superclass Animal
+/// This is a derived class Insect from superclass Animal
 /// </summary>
 public class Insect : Animal
 {
-	public Insect()
+    protected bool HasExoskeleton { get; set; }
+
+    public Insect()
 	{
-	}
+        CanEat = true;
+        CanMove = true;
+        HasExoskeleton = true;
+    }
 }

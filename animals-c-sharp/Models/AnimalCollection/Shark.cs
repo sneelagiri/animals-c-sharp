@@ -5,7 +5,18 @@
 /// </summary>
 public class Shark : Fish
 {
-	public Shark()
+    Random rnd = new Random();
+
+    public string SharkPrey { get; set; }
+
+    public Shark(string sharkPrey)
 	{
-	}
+        CanEat = true;
+        CanMove = true;
+        HasGills = true;
+        NeedsWater = true;
+        SharkPrey = sharkPrey;
+        Weight = rnd.Next(100, 30000);
+        Age = rnd.Next(5, 50);
+    }
 }

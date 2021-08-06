@@ -5,7 +5,18 @@
 /// </summary>
 public class Dog : Pet
 {
-	public Dog()
-	{   
-	}
+    public string Name { get; set; }
+    public string Breed { get; set; }
+
+    public Dog(string name, string breed, int weight, int age )
+	{
+        Name = name;
+        Breed = breed;
+        Weight = weight;
+        Age = age;
+        CanEat = true;
+        CanMove = true;
+        FemalesProduceMilk = true;
+        IsForCompanionship = true;
+    }
 }

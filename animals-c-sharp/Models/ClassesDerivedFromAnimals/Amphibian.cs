@@ -5,7 +5,12 @@
 /// </summary>
 public class Amphibian : Animal
 {
-	public Amphibian()
+    protected bool HasFourLimbs { get; set; }
+
+    public Amphibian()
 	{
-	}
+        CanEat = true;
+        CanMove = true;
+        HasFourLimbs = true;
+    }
 }

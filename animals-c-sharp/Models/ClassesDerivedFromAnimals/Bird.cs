@@ -5,7 +5,12 @@
 /// </summary>
 public class Bird : Animal
 {
+    protected bool HasFeathers { get; set; }
+
 	public Bird()
 	{
-	}
+        CanEat = true;
+        CanMove = true;
+        HasFeathers = true;
+    }
 }

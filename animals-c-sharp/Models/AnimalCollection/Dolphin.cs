@@ -5,7 +5,19 @@
 /// </summary>
 public class Dolphin : MarineAnimal
 {
-	public Dolphin()
-	{   
-	}
+    Random rnd = new Random();
+
+    public bool CanDoTricks { get; set; }
+
+    public Dolphin(bool canDoTricks)
+	{
+        CanEat = true;
+        CanMove = true;
+        FemalesProduceMilk = true;
+        NeedsWater = true;
+        CanDoTricks = canDoTricks;
+        Weight = rnd.Next(20, 5400);
+        Age = rnd.Next(5, 80);
+    }
+
 }

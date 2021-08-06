@@ -5,7 +5,13 @@
 /// </summary>
 public class HerdAnimal : Mammal
 {
-	public HerdAnimal()
+    protected bool DoGraze { get; set; }
+
+    public HerdAnimal()
 	{
-	}
+        CanEat = true;
+        CanMove = true;
+        FemalesProduceMilk = true;
+        DoGraze = true;
+    }
 }

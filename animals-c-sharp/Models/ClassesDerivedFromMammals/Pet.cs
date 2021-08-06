@@ -5,7 +5,14 @@
 /// </summary>
 public class Pet : Mammal
 {
-	public Pet()
+    protected bool IsForCompanionship { get; set; }
+
+    public Pet()
 	{
-	}
+        CanEat = true;
+        CanMove = true;
+        FemalesProduceMilk = true;
+        IsForCompanionship = true;
+
+    }
 }
