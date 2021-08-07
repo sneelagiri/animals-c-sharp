@@ -2,5 +2,24 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    Dog puppy = new Dog("Ella", "Korean Jindo", 12, 2);
+    Dolphin dolphin = new Dolphin(false);
+    Shark shark = new Shark("Dophins");
+    Tarantula tarantula = new Tarantula();
+    Wolf wolf = new Wolf();
+    ObservableCollection<Animal> AnimalsCollection = new ObservableCollection<Animal> { puppy, dolphin, shark, tarantula, wolf };
 }
 
+<div>
+    <h1>Iterating through a C# Observable Collection</h1>
+    @foreach (Animal animal in AnimalsCollection)
+    {
+        string animalType = animal.GetType().ToString();
+       string imagePath = $"/images/{animal.GetType().ToString().ToLower()}.jpg";
+            
+            <div>
+            <h2>@animalType</h2>
+            <img src="@imagePath" alt="@animalType" />
+            </div>
+    }
+</div>
