@@ -8,6 +8,17 @@
     Tarantula tarantula = new Tarantula(312);
     Wolf wolf = new Wolf(36);
     ObservableCollection<Animal> AnimalsCollection = new ObservableCollection<Animal> { puppy, dolphin, shark, tarantula, wolf };
+    ObservableCollection<Animal> DangerousAnimalsCollection = new ObservableCollection<Animal>(AnimalsCollection.Where((Animal animal) =>
+    {
+        string animalType = animal.GetType().ToString();
+        switch(animalType)
+        {
+            case "Shark": return true;
+            case "Wolf": return true;
+            case "Tarantula": return true;
+            default: return false;
+        }
+    }));
 }
 
 <div>
@@ -15,9 +26,11 @@
     @foreach (Animal animal in AnimalsCollection)
     {
         string animalType = animal.GetType().ToString();
-       string imagePath = $"/images/{animal.GetType().ToString().ToLower()}.jpg";
-            
-            <div>
+        string imagePath = $"/images/{animal.GetType().ToString().ToLower()}.jpg";
+
+        animal.Feed();
+
+        <div>
             <h2>@animalType</h2>
             <img src="@imagePath" alt="@animalType" />
             </div>
