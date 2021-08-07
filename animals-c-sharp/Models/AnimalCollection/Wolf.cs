@@ -6,13 +6,15 @@
 public class Wolf : Predator
 {
     public bool KillsDogs { get; set; }
+    public int NumberOfKills { get; set; }
 
-    public Wolf()
+    public Wolf(int numberOfKills)
 	{
         CanEat = true;
         CanMove = true;
         FemalesProduceMilk = true;
         KillsPrey = true;
         KillsDogs = true;
+        NumberOfKills = numberOfKills;
     }
 }
